@@ -45,88 +45,116 @@ npm install
 npm start
 ```
 
-🎯 План реалізації
-Фаза 1: Backend Foundation (Тиждень 1)
-Setup проекту
-• [ ] Створити FastAPI app з базовою структурою
-• [ ] Налаштувати async PostgreSQL підключення
-• [ ] Створити базові моделі (Category, Subcategory, Tag, Task)
-• [ ] Налаштувати Alembic для міграцій
+🎯 **План реалізації**
+
+### Фаза 1: Backend Foundation (Тиждень 1)
+
+**Setup проекту**  
+• [] Створити FastAPI app з базовою структурою  
+• [ ] Налаштувати async PostgreSQL підключення  
+• [ ] Створити базові моделі (Category, Subcategory, Tag, Task)  
+• [ ] Налаштувати Alembic для міграцій  
 • [ ] Створити з PostgreSQL
-Database Models
-• Category (id, name, color, created_at)
-• Subcategory (id, name, category_id, created_at)
-• Tag (id, name, color, created_at)
-• Task (id, title, description, category_id, subcategory_id, start_time, end_time, duration, created_at)
+
+**Database Models**  
+• Category (id, name, color, created_at)  
+• Subcategory (id, name, category_id, created_at)  
+• Tag (id, name, color, created_at)  
+• Task (id, title, description, category_id, subcategory_id, start_time, end_time, duration, created_at)  
 • TaskTag (task_id, tag_id) — many-to-many
 
-Фаза 2: Core API (Тиждень 1–2)
-CRUD API Endpoints
-• [ ] – CRUD для категорій
-• [ ] – CRUD для підкатегорій
-• [ ] – CRUD для тегів
-• [ ] – CRUD для завдань
+---
+
+### Фаза 2: Core API (Тиждень 1–2)
+
+**CRUD API Endpoints**  
+• [ ] CRUD для категорій  
+• [ ] CRUD для підкатегорій  
+• [ ] CRUD для тегів  
+• [ ] CRUD для завдань  
 • [ ] Async сервіси для бізнес-логіки
-Task Management Logic
-• [ ] Автоматичний розрахунок /
-• [ ] Валідація перекриваючихся завдань
+
+**Task Management Logic**  
+• [ ] Автоматичний розрахунок  
+• [ ] Валідація перекриваючихся завдань  
 • [ ] Bulk operations (start/stop multiple tasks)
 
-Фаза 3: Analytics & WebSocket (Тиждень 2)
-Analytics API
-• [ ] – статистика за день
-• [ ] – статистика за тиждень
-• [ ] – розподіл по категоріях
-• [ ] Фільтрація по даті, категорії, тегу
-WebSocket Implementation
-• [ ] WebSocket endpoint для real-time оновлень
-• [ ] Connection manager для broadcast повідомлень
-• [ ] Events: , ,
+---
 
-Фаза 4: Frontend Foundation (Тиждень 2–3)
-React Setup
-• [ ] Create React App + Tailwind CSS
-• [ ] Axios клієнт для API запитів
-• [ ] React Router для навігації
+### Фаза 3: Analytics & WebSocket (Тиждень 2)
+
+**Analytics API**  
+• [ ] Статистика за день  
+• [ ] Статистика за тиждень  
+• [ ] Розподіл по категоріях  
+• [ ] Фільтрація по даті, категорії, тегу
+
+**WebSocket Implementation**  
+• [ ] WebSocket endpoint для real-time оновлень  
+• [ ] Connection manager для broadcast повідомлень  
+• [ ] Events: task_started, task_stopped, task_updated
+
+---
+
+### Фаза 4: Frontend Foundation (Тиждень 2–3)
+
+**React Setup**  
+• [ ] Create React App + Tailwind CSS  
+• [ ] Axios клієнт для API запитів  
+• [ ] React Router для навігації  
 • [ ] Context/Provider для глобального стану
-Core Components
-• [ ] Layout з навігацією
-• [ ] WebSocket provider для real-time updates
+
+**Core Components**  
+• [ ] Layout з навігацією  
+• [ ] WebSocket provider для real-time updates  
 • [ ] Loading states та error handling
 
-Фаза 5: Main Features (Тиждень 3–4)
-Dashboard
-• [ ] Список сьогоднішніх завдань
-• [ ] Timer widget для активних завдань
+---
+
+### Фаза 5: Main Features (Тиждень 3–4)
+
+**Dashboard**  
+• [ ] Список сьогоднішніх завдань  
+• [ ] Timer widget для активних завдань  
 • [ ] Quick stats (загальний час, кількість завдань)
-Task Management
-• [ ] Task форма (створення/редагування)
-• [ ] Task cards з action buttons
+
+**Task Management**  
+• [ ] Task форма (створення/редагування)  
+• [ ] Task cards з action buttons  
 • [ ] Фільтри по категорії/тегу/даті
-Category Management
-• [ ] Category/Subcategory manager
-• [ ] Drag & drop для зміни порядку
+
+**Category Management**  
+• [ ] Category/Subcategory manager  
+• [ ] Drag & drop для зміни порядку  
 • [ ] Color picker для категорій
 
-Фаза 6: Analytics & Polish (Тиждень 4–5)
-Analytics Dashboard
-• [ ] Chart.js інтеграція
-• [ ] Time breakdown charts
-• [ ] Category distribution pie charts
+---
+
+### Фаза 6: Analytics & Polish (Тиждень 4–5)
+
+**Analytics Dashboard**  
+• [ ] Chart.js інтеграція  
+• [ ] Time breakdown charts  
+• [ ] Category distribution pie charts  
 • [ ] Date range picker
-UX Improvements
-• [ ] Keyboard shortcuts
-• [ ] Auto-save drafts
-• [ ] Toast notifications
+
+**UX Improvements**  
+• [ ] Keyboard shortcuts  
+• [ ] Auto-save drafts  
+• [ ] Toast notifications  
 • [ ] Dark/light theme
 
-Фаза 7: Testing & Deployment (Тиждень 5–6)
-Testing
-• [ ] Backend: тести для API
-• [ ] Frontend: React Testing Library
+---
+
+### Фаза 7: Testing & Deployment (Тиждень 5–6)
+
+**Testing**  
+• [ ] Backend: тести для API  
+• [ ] Frontend: React Testing Library  
 • [ ] Integration тести для WebSocket
-DevOps
-• [ ] Docker multi-stage builds
-• [ ] GitHub Actions CI/CD
-• [ ] Production
+
+**DevOps**  
+• [ ] Docker multi-stage builds  
+• [ ] GitHub Actions CI/CD  
+• [ ] Production  
 • [ ] Environment variables management
